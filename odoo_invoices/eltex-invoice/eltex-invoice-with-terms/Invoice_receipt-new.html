@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Invoice receipt - Bootdey.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <link
+      href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="invoice-container" style="background: #eceef4">
+      <div class="receipt-content topside">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div
+                class="payment-logo"
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: flex-start;
+
+                  padding-bottom: 48px;
+                "
+              >
+                <div class="">
+                  <img
+                    src="https://www.eltex.be/wp-content/uploads/2022/09/eltex-white.png"
+                    width="200px"
+                    alt=""
+                  />
+                  <div class="" style="margin-top: 32px; font-size: 32px">
+                    <span>Factuur: 1918201</span>
+                  </div>
+                </div>
+              </div>
+              <div class="payment-info">
+                <div class="row" style="display: flex; align-items: flex-end">
+                  <div class="col-sm-6 text-right">
+                    <div>
+                      <div class="topside-item">
+                        <span>Factuurdatum:</span>
+                        <strong>23 december 2022</strong>
+                      </div>
+                      <div class="topside-item">
+                        <span>Vervaldatum:</span>
+                        <strong>30 december 2022</strong>
+                      </div>
+                      <div class="topside-item">
+                        <span>Vertegenwoordiger:</span>
+                        <strong>Vitalie Rosescu</strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INVOICE OR OFFERTE -->
+      <div class="receipt-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div
+                class="invoice-wrapper"
+                style="border-radius: 32px; border: none; margin-top: -60px"
+              >
+                <div
+                  class="payment-details"
+                  style="border-top: 0; padding-top: 0; margin-top: 0"
+                >
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <span>Klantgegevens</span>
+                      <strong> Juliette Van Der Sar </strong>
+                      <p>
+                        Vlaanderenstraat 18 <br />
+                        9000 Gent <br />
+                        Oost-Vlaanderen <br />
+                        0487373669 <br />
+                        BE45 1242 9140 9545
+                      </p>
+                    </div>
+                    <div class="col-sm-6 text-right">
+                      <span>Betaalinfo</span>
+                      <p style="">
+                        <strong>Eltex</strong>
+                        <br />
+                        Deerlijksestraat 57 <br />
+                        Kortrijk 8500 <br />
+                        BE0731563013 <br />
+                        BNP Paribas Fortis <br />
+                        GEBABEBB
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="line-items">
+                  <div class="headers clearfix">
+                    <div class="row">
+                      <div class="product-titles">
+                        <div class="col-xs-7">Item & Beschrijving</div>
+                        <div class="col-xs-1">Hvh</div>
+                        <div class="col-xs-2 text-right">Belasting</div>
+                        <div class="col-xs-2 text-right">Bedrag</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="items products">
+                    <div class="row item">
+                      <div class="col-xs-7 desc">
+                        Belinus M7 410wp Bifacial Glas/Glas
+                        <ul
+                          class="item-extra"
+                          style="font-size: 12px; margin-bottom: 0"
+                        >
+                          <li>35 jaar product garantie van Belinus</li>
+                          <li>35 jaar rendement garantie van Belinus</li>
+                          <li>35 jaar service garantie van Belinus</li>
+                        </ul>
+                      </div>
+                      <div class="col-xs-1 qty">28</div>
+                      <div class="col-xs-2 amount text-right">6%</div>
+                      <div class="col-xs-2 amount text-right">€5.402,01</div>
+                    </div>
+                    <div class="row item">
+                      <div class="col-xs-7 desc">
+                        SAJ R5 Omvormer
+                        <ul
+                          class="item-extra"
+                          style="font-size: 12px; margin-bottom: 0"
+                        >
+                          <li>20 jaar garantie omvormer</li>
+                        </ul>
+                      </div>
+                      <div class="col-xs-1 qty">1</div>
+                      <div class="col-xs-2 amount text-right">21%</div>
+                      <div class="col-xs-2 amount text-right"></div>
+                    </div>
+                    <div class="row item">
+                      <div class="col-xs-7 desc">
+                        Inclusief
+                        <ul
+                          class="item-extra"
+                          style="font-size: 12px; margin-bottom: 0"
+                        >
+                          <li>Werkuren</li>
+                          <li>Installatiemateriaal</li>
+                          <li>Installatie</li>
+                          <li>AREI Keuring</li>
+                          <li>Aansluiting</li>
+                          <li>Begeleiding aanvraag premies</li>
+                          <li>Metervervanging</li>
+                        </ul>
+                      </div>
+
+                      <div class="col-xs-1 qty">3</div>
+                      <div class="col-xs-2 amount text-right">6%</div>
+                      <div class="col-xs-2 amount text-right"></div>
+                    </div>
+                  </div>
+                  <div class="total text-right">
+                    <div class="extra-notes">
+                      <strong>Opmerkingen</strong>
+                      <ul style="padding-left: 16px">
+                        <li>
+                          Bon wordt nietig verklaard indien afkeuring lening
+                          uw/onze bank.
+                        </li>
+                        <li>
+                          Geen extra kosten (excl. rentevoet & excl. uitbreiding
+                          elektrische installatie).
+                        </li>
+                        <li>Levertermijn +- 5 maanden.</li>
+                        <li>
+                          Storten gebeurt op deze rekening:
+                          <strong>BE63 0018 6741 5708</strong>
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <div class="field">Subtotal <span>€14.891,51</span></div>
+                      <div class="field">BTW (6%) <span>€941.25</span></div>
+                      <div class="field grand-total">
+                        Totaal <span>€15.141</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="items">
+                    <div
+                      class="row item"
+                      style="
+                        margin-top: 90px;
+                        padding-left: 16px;
+                        border-bottom: 2px solid #ebecee;
+                      "
+                    >
+                      <strong>Voorwaarden & bepalingen</strong> <br />
+                      * Eventuele bouwvergunningen dienen aangevraagd te worden
+                      door de klant. <br />
+                      * Aanpassingen aan de bestaande elektrische installatie
+                      zijn niet inbegrepen indien deze niet conform is aan het
+                      AREI, eventuele aanpassingen zijn ten laste van de klant.
+                    </div>
+                    <div
+                      class="row item"
+                      style="font-size: 10px; padding: 0; margin-top: 56px"
+                    >
+                      <p
+                        style="
+                          font-size: 16px;
+                          text-transform: uppercase;
+                          color: #3d0596;
+                          margin-left: 12px;
+                        "
+                      >
+                        algemene voorwaarden
+                      </p>
+                      <ol style="padding: 0 20px">
+                        <li>
+                          Identificatiegegevens van ELTEX/ The El Company BV,
+                          Deerlijksestraat 57 8500 Kortrijk / BTW BE0731 563 013
+                          • KBO 0731 563 013 / Hierna genoemd “ELTEX” of
+                          “Verkoper” / U kunt ons bereiken op volgende manieren:
+                          T: +32 (0)51 25 31 67• E: info@eltex.be
+                        </li>
+                        <li>
+                          Deze algemene voorwaarden vervangen alle eerdere
+                          voorwaarden uit het verleden. Tenzij expliciet anders
+                          bedongen komt elke overeenkomst met ELTEX (hierna: de
+                          Verkoper) tot stand onder de hierna vermelde algemene
+                          voorwaarden en desgevallend de bijzondere voorwaarden
+                          vermeld in de laatste offerte of orderbevestiging van
+                          de Verkoper. De bijzondere voorwaarden zullen steeds
+                          voorrang hebben op de algemene. De algemene en
+                          bijzondere voorwaarden van de medecontractant (hierna:
+                          de “Koper”) worden uitdrukkelijk uitgesloten, zelfs in
+                          geval van ondertekening door de Verkoper van een
+                          contract of enig ander document dat uitgaat van de
+                          Koper.
+                        </li>
+                        <li>
+                          De offertes van de Verkoper vervallen 14 dagen na de
+                          offertedatum. De overeenkomst komt definitief tot
+                          stand wanneer de Koper schriftelijk te kennen geeft
+                          het aanbod te aanvaarden door ondertekening van de
+                          offerte. Zo de bestelling later geplaatst wordt kan
+                          dit tot prijsherziening aanleiding geven in welk geval
+                          de koper kan afzien van de bestelling. Wie een
+                          bestelling plaatst via onze website aanvaardt
+                          automatisch de algemene voorwaarden.
+                        </li>
+                        <li>
+                          Aanpassingen aan de bestaande elektrische installatie
+                          / zekeringskast zijn niet inbegrepen indien deze niet
+                          conform is aan het AREI, eventuele aanpassingen zijn
+                          steeds ten laste van de klant. In de offerte is
+                          slechts één keuring voorzien. De kosten voor een
+                          herkeuring zijn steeds ten laste van de klant.
+                        </li>
+                        <li>
+                          Eventuele bouwvergunningen dienen tijdig aangevraagd
+                          en bekomen te worden door de klant. Indien er geen
+                          bouwvergunning bekomen werd is het de plicht van de
+                          klant om de Verkoper hiervan onmiddellijk in te
+                          lichten. Indien de klant de installatie laat plaatsen
+                          zonder bouwvergunning draagt de klant hiervan de
+                          volledige verantwoordelijkheid en zal hij de Verkoper
+                          dienen te vrijwaren mocht de Verkoper hieromtrent in
+                          rechte aangesproken worden of beboet worden. Reserve
+                          dakpannen zijn eveneens te voorzien door klant. Indien
+                          de installatie niet kan gebeuren omdat het dak niet in
+                          orde of gebrekkig is zullen bijkomende kosten
+                          aangerekend worden voor een tweede installatie. De
+                          Koper is verantwoordelijk voor de staat van het dak.
+                          Door het plaatsen van de zonnepanelen aanvaardt de
+                          verkoper de staat van het dak niet. De Koper dient
+                          steeds minimaal drie parkeerplaatsen te voorzien op
+                          het ogenblik van de installatie. Indien hiervoor een
+                          vergunning dient aangevraagd te worden is de Koper
+                          hiervoor verantwoordelijk. Indien op het ogenblik van
+                          de installatie niet geparkeerd kan worden en de
+                          installatie hierdoor uitgesteld moet worden kan de
+                          Verkoper de bijkomende kosten hiervoor aanrekenen.
+                        </li>
+                        <li>
+                          De leveringsdatum of -termijn die wordt opgegeven bij
+                          de bestelling is steeds indicatief. De verkoper doet
+                          zijn best om deze termijn na te leven, doch is ook
+                          afhankelijk van de weersomstandigheden en van haar
+                          leveranciers. De koper kan geen aanspraak maken op
+                          schadevergoeding, prijsvermindering of ontbinding
+                          indien de leveringsdatum of -termijn niet nagekomen
+                          wordt. Bij gebrek aan een precieze leveringsdatum of
+                          -termijn wordt deze geacht een normale termijn te
+                          bedragen afhankelijk van de leveringstermijn van de
+                          fabrikant, zonder dat de Koper enig recht op
+                          ontbinding of prijsvermindering kan laten gelden.
+                        </li>
+                        <li>
+                          De levering/installatie is voorzien op het op de
+                          offerte voorziene adres van de Koper. De Koper dient
+                          alle leveringen van de Verkoper grondig te (laten)
+                          controleren bij de in ontvangst name van de goederen.
+                          In ontvangst name van de goederen geldt als
+                          aanvaarding. Onverminderd eerdere aanvaarding
+                          (ingevolge algehele of gedeeltelijke verwerking van de
+                          geleverde goederen), worden de geleverde goederen
+                          onherroepelijk geacht aanvaard te zijn bij gebrek aan
+                          schriftelijke klacht binnen de 4 dagen na in ontvangst
+                          name. De aanvaarding dekt alle zichtbare en verborgen
+                          gebreken. Bij schade waarvoor zowel de Verkoper als
+                          derden en/of de Koper (mede) aansprakelijk zijn, is de
+                          Verkoper slechts aansprakelijk in de mate haar
+                          fout(en) tot de schade heeft (hebben) bijgedragen.
+                          Elke vorm van hoofdelijke of in solidum
+                          aansprakelijkheid van de Verkoper wordt uitgesloten.
+                          Indien het aandeel van de fout van de Verkoper in
+                          bepaalde schade niet kan bepaald worden, is de
+                          Verkoper hoogstens aansprakelijk tot beloop van het
+                          deel van die schade dat evenredig is aan zijn
+                          aansprakelijkheid voor die schade. De Verkoper
+                          voorziet ten aanzien van consumenten in de wettelijke
+                          garantie conform art. 1649bis e.v. B.W. De
+                          garantieverbintenis is persoonlijk tegenover de koper
+                          aangegaan. Indien derhalve de koper de geleverde
+                          goederen en diensten aan derden overdraagt, kunnen
+                          deze derden zich niet rechtstreeks tegen de koper op
+                          garantie beroepen.
+                        </li>
+                        <li>
+                          De betaling van de goederen geschiedt via
+                          bankoverschrijving en als volgt naar de keuze van de
+                          klant: ofwel volledige betaling bij de bestelling
+                          ofwel 50% op het ogenblik van het plaatsen van de
+                          bestelling, 45% op de dag van de installatie en 5% op
+                          het ogenblik van de keuring. Bij gebreke aan correcte
+                          betaling kan de Verkoper de levering en installatie
+                          weigeren en de overeenkomst lastens de Koper ontbonden
+                          verklaren. In dit geval is de Koper een forfaitaire
+                          schadevergoeding van 15% verschuldigd. Alle prijzen
+                          zijn uitgedrukt in Euro en zijn exclusief BTW. De BTW
+                          (21% of 6%) is steeds ten laste van de
+                          Koper.Verhogingen in de productie-, constructie- en
+                          bevestigingskosten (lonen, materiaal, grondstoffen,
+                          transportkosten, invoerrechten) of prijswijzigingen
+                          bij de leveranciers van de Verkoper kunnen steeds tot
+                          prijsherziening aanleiding geven. Indien op verzoek
+                          van de Koper wijzigingen worden aangebracht aan de
+                          leveringstermijn en/of -plaats en/of -omstandigheden
+                          of indien de Koper verkeerde inlichtingen heeft
+                          verstrekt, behoudt de Verkoper zich het recht voor de
+                          extra kosten ten gevolge van deze wijzigingen aan de
+                          Koper door te rekenen. Indien voor leveringsdatum de
+                          BTW wijzigingen ondergaat, wordt de totale prijs in
+                          dezelfde mate aangepast.
+                        </li>
+                        <li>
+                          De Koper dient facturen van de Verkoper onmiddellijk
+                          bij ontvangst te controleren. Onverminderd eerdere (al
+                          dan niet stilzwijgende) aanvaarding wordt de Koper
+                          onweerlegbaar geacht een factuur van de Verkoper
+                          aanvaard te hebben bij gebrek aan gemotiveerd protest
+                          binnen de 8 kalenderdagen na ontvangst van de factuur.
+                          Facturen van de Verkoper zijn betaalbaar zonder
+                          korting. Behoudens vermelding van een concrete
+                          vervaldag, is de factuur betaalbaar binnen een termijn
+                          van 10 dagen te rekenen vanaf de dag volgend op die
+                          van ontvangst van de factuur door de Koper. De Koper
+                          is vanaf de vervaldag van rechtswege en zonder
+                          voorafgaande ingebrekestelling een verwijlstinstrest
+                          van 1% per maand, met als minimum de wettelijke
+                          intresten, en een forfaitaire schadevergoeding van 15%
+                          op het achterstallig bedrag met een minimum van € 250.
+                          Kortingen, aftrekken, inhoudingen e.d., om welke reden
+                          ook (zoals voor contante betaling) worden niet
+                          toegestaan. Bij betaalachterstand heeft de Verkoper
+                          het recht de (verdere) uitvoering van elke
+                          overeenkomst met de Koper te schorsen, ook als de
+                          wanbetalingen andere contractuele relatie betreft. Bij
+                          niet betaling van een gedeelte of het geheel van een
+                          factuur op de voorziene vervaldag, wordt het saldo van
+                          alle andere, zelfs niet vervallen facturen, van
+                          rechtswege en onmiddellijk opeisbaar. Vanaf de tweede
+                          aanmaningsbrief is kan de Verkoper een dossierkost van
+                          € 150 per aanmaning aanrekenen aan de Koper.
+                        </li>
+                        <li>
+                          Alle (verkochte) goederen blijven eigendom van de
+                          Verkoper tot de Koper zijn verbintenissen integraal
+                          heeft voldaan. Dit belet niet dat alle risico wegens
+                          verlies of beschadiging onmiddellijk de Koper overgaat
+                          vanaf de totstandkoming van de overeenkomst. De Koper
+                          mag goederen die niet integraal betaald zijn niet
+                          vervreemden, incorporeren, door bestemming onroerend
+                          maken, noch in pand geven of met enig ander recht of
+                          zekerheid bezwaren ten gunste van derden. Indien de
+                          Koper niet (volledig) betaalde goederen toch verkoopt,
+                          wordt de schuldvordering van de Koper op de
+                          derde-koper van rechtswege op de Verkoper overgedragen
+                          (onverminderd andere rechtsmiddelen die de Verkoper
+                          kan laten gelden ten aanzien van de Koper en/of de
+                          derde-koper), met dien verstande dat deze cessie de
+                          Koper op geen enkele wijze bevrijdt.
+                        </li>
+                        <li>
+                          De particuliere koper en de Verkoper hebben het recht
+                          om kosteloos binnen een termijn van 14 dagen zonder
+                          opgave van redenen de overeenkomst te herroepen. Om
+                          het herroepingsrecht uit te oefenen, moet de partijen
+                          elkaar via een ondubbelzinnige verklaring (bv.
+                          Schriftelijk per post, fax of e-mail) op de hoogte
+                          stellen van de beslissing om de overeenkomst te
+                          herroepen. De particuliere koper kan hiervoor gebruik
+                          maken van het modelformulier voor herroeping dat als
+                          bijlage bij de offerte wordt gevoegd, maar is hiertoe
+                          niet verplicht. Om de herroepingstermijn na te leven
+                          volstaat het dat de particuliere koper de mededeling
+                          betreffende de uitoefening van het herroepingsrecht
+                          verzendt voordat de herroepingstermijn is verstreken.
+                          Als de particuliere koper de overeenkomst herroept,
+                          ontvangt de Koper alle betalingen die hij tot op dat
+                          moment heeft gedaan, inclusief leveringskosten (met
+                          uitzondering van eventuele extra kosten ten gevolge
+                          van de keuze van de particuliere koper voor een andere
+                          wijze van levering dan de door ELTEX geboden
+                          goedkoopste standaard levering) onverwijld en in ieder
+                          geval niet later dan 14 dagen nadat de Verkoper op de
+                          hoogte is gesteld van de beslissing van de Koper om de
+                          overeenkomst te herroepen, van de Verkoper terug. De
+                          Verkoper betaalt de Koper terug met hetzelfde
+                          betaalmiddel als waarmee de Koper de oorspronkelijke
+                          transactie heeft verricht, tenzij de Koper
+                          uitdrukkelijk anderszins heeft ingestemd. In ieder
+                          geval zal de Koper voor zulke terugbetaling geen
+                          kosten in rekening worden gebracht. De Verkoper zal de
+                          goederen op haar kosten bij de Koper afhalen. De Koper
+                          is alleen aansprakelijk voor de waardevermindering van
+                          de goederen die het gevolg zijn van het gebruik van de
+                          goederen, dat verder gaat dan nodig is om de aard, de
+                          kenmerken en het werking van de goederen vast te
+                          stellen. Indien na deze periode van 14 dagen de
+                          overeenkomst door de Koper of Verkoper wordt
+                          geannuleerd is een forfaitaire schadevergoeding van
+                          15% van de totaalprijs verschuldigd. Het
+                          herroepingsrecht is niet van toepassing op de
+                          professionele (B2B) kopers. Indien de overeenkomst
+                          wordt ontbonden heeft de Verkoper het recht de
+                          goederen aan derden te verkopen. Indien de
+                          leveringsdatum op eenzijdig verzoek van de Koper wordt
+                          verdaagd of uitgesteld voor langer dan een maand, dan
+                          moet het nog openstaand saldo direct betaald worden en
+                          worden bewaringskosten doorgerekend a rato van 1% per
+                          maand op de waarde van de goederen. Deze
+                          bewaringskosten dienen maandelijks betaald te worden.
+                          Het vorig lid is niet van toepassing zo de
+                          leveringsdatum niet kan worden nageleefd wegens
+                          normaal niet voorziene omstandigheden onafhankelijk
+                          van de wil van de Verkoper (overmacht), en de
+                          Verkoper, binnen de 14 dagen nadat hij kennis heeft
+                          genomen van het bestaan van deze omstandigheden, en
+                          ten laatste op de voorzien leveringsdatum, de Koper
+                          hiervan heeft verwittigd.
+                        </li>
+                        <li>
+                          In geval van online koop via de website heeft de
+                          verkoper eveneens recht op het wettelijk voorzien
+                          herroepingsrecht van 14 dagen en voor zover de
+                          goederen en hun verpakking met alle toebehoren in
+                          ongeschonden toestand terug bezorgd worden. De koper
+                          is aansprakelijk voor de waardevermindering van de
+                          goederen die het gevolg is van het gebruik van de
+                          goederen, dat verder gaat dan nodig is om de aard, de
+                          kenmerken en de werking van de goederen vast te
+                          stellen. Hij dient de goederen dan ook met gepaste
+                          zorg te hanteren en te inspecteren. Binnen de 14 dagen
+                          nadat de Verkoper op de hoogte gesteld werd van de
+                          beslissing tot herroeping, worden alle betaalde
+                          bedragen (desgevallend verminderd met de bovenvermelde
+                          transportkosten en waardevermindering) terugbetaald
+                          via de betaalmethode die de klant gebruikte voor zijn
+                          aankoop. De Verkoper kan wachten met terugbetaling tot
+                          het de goederen heeft teruggekregen, of de koper heeft
+                          aangetoond dat hij de goederen heeft teruggezonden.
+                        </li>
+                        <li>
+                          Eventuele nietigheid of ongeldigheid van een of
+                          meerdere bepalingen van huidige voorwaarden beperkt
+                          zich tot de betreffende bepaling(en) en laat de
+                          overige bepalingen van huidige voorwaarden onverlet.
+                          De betwiste bepaling wordt geacht op zichzelf te staan
+                          en niet van toepassing te zijn. De verkoper heeft het
+                          voorrecht om de betreffende bepaling te vervangen door
+                          een geldige bepaling van gelijke strekking. Naargelang
+                          de hoedanigheid van de Koper, zijn enkel rechtbanken
+                          van het arrondissement West-Vlaanderen, afdelingen
+                          Kortrijk, de Ondernemingsrechtbank Gent, afdeling
+                          Kortrijk en het Vredegerecht Roeselare bevoegd kennis
+                          te nemen van geschillen die tussen de Koper en de
+                          Verkoper zouden rijzen. De Verkoper behoudt zich het
+                          recht voor te dagvaarden voor de Rechtbank van het
+                          domicilie van de Koper. Het Belgische recht is steeds
+                          van toepassing op deze overeenkomst en de daaruit
+                          voortvloeiende geschillen.
+                        </li>
+                        <li>
+                          Verwerking van persoonsgegevens en cookie Policy: De
+                          door de Koper opgegeven informatie is noodzakelijk
+                          voor het verwerken en voltooien van de bestellingen,
+                          en het opstellen van de rekeningen. Als deze gegevens
+                          ontbreken wordt de bestelling onvermijdelijk
+                          geannuleerd. Het opgeven van onjuiste of valse
+                          persoonsgegevens, wordt beschouwd als een inbreuk op
+                          de huidige Verkoopsvoorwaarden. De persoonsgegevens
+                          van de koper zullen uitsluitend verwerkt worden in
+                          overeenstemming met de geldende Privacy Statement, te
+                          consulteren via de website van Eltex. Eltex zal alle
+                          mogelijke maatregelen nemen om de data die bij het tot
+                          stand komen van de overeenkomst via elektronische
+                          kanalen worden verzonden zo goed mogelijk te
+                          beveiligen. Onze Cookie Policy kan eveneens
+                          geraadpleegd worden via de website.
+                        </li>
+                        <li>
+                          ndien er klachten zijn heeft de koper de plicht deze
+                          klacht zo snel mogelijk over te maken aan Eltex. De
+                          Koper heeft recht tot inzage, informatie en
+                          verbetering van de persoonsgegevens die op hem
+                          betrekking hebben. De enige manier waarop een klacht
+                          kan worden geformuleerd is via info@eltex.be. Klachten
+                          moeten helder en duidelijk worden geformuleerd, zodat
+                          wij er alles aan kunnen doen de klachten zo snel
+                          mogelijk te verhelpen. We beantwoorden klachten altijd
+                          binnen de 5 werkdagen.
+                        </li>
+                        <li>
+                          Btw-tarief: Bij gebrek aan schriftelijke betwisting
+                          binnen een termijn van één maand vanaf de ontvangst
+                          van de factuur, wordt de klant geacht te erkennen dat
+                          (1) de werken worden verricht aan een woning waarvan
+                          de eerste ingebruikneming heeft plaatsgevonden in een
+                          kalenderjaar dat ten minste tien/vijftien jaar
+                          voorafgaat aan de datum van de eerste factuur met
+                          betrekking tot die werken, (2) de woning, na
+                          uitvoering van die werken, uitsluitend of
+                          hoofdzakelijk als privéwoning wordt gebruikt en (3) de
+                          werken worden verstrekt en gefactureerd aan een
+                          eindverbruiker. Wanneer minstens één van die
+                          voorwaarden niet is voldaan, zal het normale
+                          btw-tarief van 21 pct. van toepassing zijn en is de
+                          afnemer ten aanzien van die voorwaarden aansprakelijk
+                          voor de betaling van de verschuldigde belasting,
+                          interesten en geldboeten.
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer">Copyright © ELTEX 2023 - THE EL COMPANY</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style type="text/css">
+      .receipt-content .logo a:hover {
+        text-decoration: none;
+        color: #7793c4;
+      }
+
+      .receipt-content .invoice-wrapper {
+        background: #fff;
+        border: 1px solid #cdd3e2;
+        box-shadow: 0px 0px 1px #ccc;
+        padding: 40px 40px 60px;
+        margin-top: 40px;
+        border-radius: 4px;
+      }
+
+      .receipt-content .invoice-wrapper .payment-details span {
+        color: #a9b0bb;
+        display: block;
+      }
+      .receipt-content .invoice-wrapper .payment-details a {
+        display: inline-block;
+        margin-top: 5px;
+      }
+
+      .receipt-content .invoice-wrapper .line-items .print a {
+        display: inline-block;
+        border: 1px solid #9cb5d6;
+        padding: 13px 13px;
+        border-radius: 5px;
+        color: #708dc0;
+        font-size: 13px;
+        -webkit-transition: all 0.2s linear;
+        -moz-transition: all 0.2s linear;
+        -ms-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+      }
+
+      .receipt-content .invoice-wrapper .line-items .print a:hover {
+        text-decoration: none;
+        border-color: #333;
+        color: #333;
+      }
+
+      .receipt-content {
+        background: #eceef4;
+      }
+      @media (min-width: 1200px) {
+        .receipt-content .container {
+          width: 900px;
+        }
+      }
+
+      .receipt-content .logo {
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      .receipt-content .logo a {
+        font-family: Myriad Pro, Lato, Helvetica Neue, Arial;
+        font-size: 36px;
+        letter-spacing: 0.1px;
+        color: #555;
+        font-weight: 300;
+        -webkit-transition: all 0.2s linear;
+        -moz-transition: all 0.2s linear;
+        -ms-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+      }
+
+      .receipt-content .invoice-wrapper .intro {
+        line-height: 25px;
+        color: #444;
+      }
+
+      .receipt-content .invoice-wrapper .payment-info {
+        margin-top: 25px;
+        padding-top: 15px;
+      }
+
+      .receipt-content .invoice-wrapper .payment-info span {
+        color: #a9b0bb;
+      }
+
+      .receipt-content .invoice-wrapper .payment-info strong {
+        display: block;
+        color: #444;
+        margin-top: 3px;
+      }
+
+      @media (max-width: 767px) {
+        .receipt-content .invoice-wrapper .payment-info .text-right {
+          text-align: left;
+          margin-top: 20px;
+        }
+      }
+      .receipt-content .invoice-wrapper .payment-details {
+        border-top: 2px solid #ebecee;
+        margin-top: 30px;
+        padding-top: 20px;
+        line-height: 22px;
+      }
+
+      @media (max-width: 767px) {
+        .receipt-content .invoice-wrapper .payment-details .text-right {
+          text-align: left;
+          margin-top: 20px;
+        }
+      }
+      .receipt-content .invoice-wrapper .line-items {
+        margin-top: 40px;
+      }
+      .receipt-content .invoice-wrapper .line-items .headers {
+        color: #fff;
+        font-size: 13px;
+        letter-spacing: 0.3px;
+      }
+      .receipt-content .invoice-wrapper .line-items .items {
+        margin-top: 8px;
+        border-bottom: 2px solid #ebecee;
+        padding-bottom: 8px;
+      }
+      .receipt-content .invoice-wrapper .line-items .items .item {
+        padding: 10px 0;
+        color: #696969;
+        font-size: 15px;
+      }
+      @media (max-width: 767px) {
+        .receipt-content .invoice-wrapper .line-items .items .item {
+          font-size: 13px;
+        }
+      }
+      .receipt-content .invoice-wrapper .line-items .items .item .amount {
+        letter-spacing: 0.1px;
+        color: #84868a;
+        font-size: 16px;
+      }
+      @media (max-width: 767px) {
+        .receipt-content .invoice-wrapper .line-items .items .item .amount {
+          font-size: 13px;
+        }
+      }
+
+      .receipt-content .invoice-wrapper .line-items .total {
+        margin-top: 30px;
+      }
+
+      .receipt-content .invoice-wrapper .line-items .total .extra-notes {
+        float: left;
+        width: 40%;
+        text-align: left;
+        font-size: 13px;
+        color: #7a7a7a;
+        line-height: 20px;
+      }
+
+      @media (max-width: 767px) {
+        .receipt-content .invoice-wrapper .line-items .total .extra-notes {
+          width: 100%;
+          margin-bottom: 30px;
+          float: none;
+        }
+      }
+
+      .receipt-content .invoice-wrapper .line-items .total .extra-notes strong {
+        display: block;
+        margin-bottom: 5px;
+        color: #454545;
+      }
+
+      .receipt-content .invoice-wrapper .line-items .total .field {
+        margin-bottom: 7px;
+        font-size: 14px;
+        color: #555;
+      }
+
+      .receipt-content .invoice-wrapper .line-items .total .field.grand-total {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .receipt-content
+        .invoice-wrapper
+        .line-items
+        .total
+        .field.grand-total
+        span {
+        color: #20a720;
+        font-size: 16px;
+      }
+
+      .receipt-content .invoice-wrapper .line-items .total .field span {
+        display: inline-block;
+        margin-left: 20px;
+        min-width: 85px;
+        color: #84868a;
+        font-size: 15px;
+      }
+
+      .receipt-content .invoice-wrapper .line-items .print {
+        margin-top: 50px;
+        text-align: center;
+      }
+
+      .receipt-content .invoice-wrapper .line-items .print a i {
+        margin-right: 3px;
+        font-size: 14px;
+      }
+
+      .receipt-content .footer {
+        margin-top: 40px;
+        margin-bottom: 110px;
+        text-align: center;
+        font-size: 12px;
+        color: #969cad;
+      }
+
+      .topside {
+        color: white;
+        padding: 60px 0 120px 0;
+        background: url("https://www.eltex.be/wp-content/uploads/2022/11/eltex-outline-big.svg"),
+          linear-gradient(83.79deg, #2ed9c3 1.26%, #3d0596 99.62%);
+        background-repeat: no-repeat;
+        background-position: right -50%;
+      }
+
+      .topside .container {
+        position: relative;
+      }
+
+      .topside .invoice-number {
+        position: absolute;
+        right: 2%;
+        top: 5%;
+      }
+
+      .topside-item {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding-bottom: 8px;
+      }
+
+      .products {
+        padding: 16px !important;
+        border-bottom: 0 !important;
+        background-color: #f8f3ff;
+        margin: 0 !important;
+      }
+
+      .product-titles {
+        display: flex;
+        margin: 0 15px;
+        background: #3d0596;
+        padding: 16px 0;
+      }
+    </style>
+  </body>
+</html>

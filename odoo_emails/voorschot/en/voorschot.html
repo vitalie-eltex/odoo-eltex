@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html
+  xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  lang="en"
+>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!--<![endif]-->
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: inherit !important;
+      }
+      #MessageViewBody a {
+        color: inherit;
+        text-decoration: none;
+      }
+      p {
+        line-height: inherit;
+      }
+      .desktop_hide,
+      .desktop_hide table {
+        mso-hide: all;
+        display: none;
+        max-height: 0;
+        overflow: hidden;
+      }
+      .image_block img + div {
+        display: none;
+      }
+      @media (max-width: 680px) {
+        .row-1 .column-1 .block-1.image_block img,
+        .row-10 .column-2 .block-1.image_block img,
+        .row-4 .column-1 .block-1.button_block .alignment a,
+        .row-4 .column-1 .block-1.button_block .alignment div {
+          display: inline-block !important;
+        }
+        .row-content {
+          width: 100% !important;
+        }
+        .mobile_hide {
+          display: none;
+        }
+        .stack .column {
+          width: 100%;
+          display: block;
+        }
+        .mobile_hide {
+          min-height: 0;
+          max-height: 0;
+          max-width: 0;
+          overflow: hidden;
+          font-size: 0;
+        }
+        .desktop_hide,
+        .desktop_hide table {
+          display: table !important;
+          max-height: none !important;
+        }
+        .row-1 .column-1 .block-1.image_block .alignment,
+        .row-1 .column-1 .block-2.heading_block h1,
+        .row-1 .column-1 .block-3.paragraph_block td.pad > div,
+        .row-4 .column-1 .block-1.button_block .alignment,
+        .row-5 .column-1 .block-1.heading_block h2,
+        .row-6 .column-2 .block-1.paragraph_block td.pad > div,
+        .row-7 .column-2 .block-1.paragraph_block td.pad > div,
+        .row-8 .column-2 .block-1.paragraph_block td.pad > div {
+          text-align: center !important;
+        }
+        .row-4 .column-1 .block-1.button_block a span,
+        .row-4 .column-1 .block-1.button_block div,
+        .row-4 .column-1 .block-1.button_block div span {
+          line-height: 2 !important;
+        }
+        .row-8 .column-2 .block-1.paragraph_block td.pad {
+          padding: 10px !important;
+        }
+        .row-10 .column-2 .block-1.image_block .alignment {
+          text-align: left !important;
+        }
+        .row-6 .column-1,
+        .row-7 .column-1,
+        .row-8 .column-1 {
+          padding: 15px 0 5px !important;
+        }
+        .row-10 .column-1 {
+          padding: 5px 20px 0 !important;
+        }
+      }
+    </style>
+  </head>
+
+  <div class="variables" style="display: none">
+    <div>
+      Name of customer
+      <span t-out="object.partner_id.name or ''">placeholder name</span>
+
+      pro-forma ?
+      <span t-if="ctx.get('proforma')">Pro-forma Invoice</span>
+      <span t-if="not ctx.get('proforma')">No Pro-forma</span>
+
+      Status:
+      <span t-if="object.state in ('draft','sent')">Quotation</span>
+      <span t-if="object.state in ('order')">Sales Order</span>
+
+      Amount:
+      <span
+        t-out="format_amount(object.amount_total, object.pricelist_id.currency_id) or ''"
+        >placeholder amount</span
+      >
+
+      Reference to Quotation/Sales order number
+      <span t-out="object.name or ''">placeholder sales order reference</span>
+
+      Fields for invoices & credit note e-mail:
+    </div>
+    <div>
+      Name of customer
+      <span t-out="object.partner_id.name or ''">placeholder name</span>
+
+      Reference to invoice number
+      <span t-out="object.name or ''">placeholder invoice number</span>
+
+      Reference to sales order
+      <span t-out="object.invoice_origin or ''">placeholder SO number</span>
+
+      Amount: ✅
+      <span
+        style="font-weight: bold"
+        t-out="format_amount(object.amount_total, object.currency_id) or ''"
+      >
+        placeholder amount
+      </span>
+
+      Paid status:
+      <span t-if="object.payment_state in ('paid', 'in_payment')">
+        This invoice is already paid.
+      </span>
+      <span t-if="object.payment_state not in ('paid', 'in_payment')">
+        Please pay at your earliest convenience.
+      </span>
+
+      Payment reference: ✅
+      <span t-if="object.payment_reference">placeholder payment reference</span>
+    </div>
+  </div>
+
+  <body
+    style="
+      background-color: #efefef;
+      margin: 0;
+      padding: 0;
+      -webkit-text-size-adjust: none;
+      text-size-adjust: none;
+    "
+  ></body>
+</html>
